@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微博</title>
+    <style>
+        ul{
+            list-style-type: none;}
+        *{margin:0;padding: 0;}
+        .box {
+            margin: 100px auto;
+            width: 600px;
+            height: auto;
+            border:1px solid #333;
+            padding: 30px 0;
+        }
+        textarea {
+            width: 450px;
+            resize: none;  /*防止用户拖动 右下角*/
+        }
+        .box li {
+            width: 450px;
+            line-height: 30px;
+            border-bottom:1px dashed #ccc;
+            margin-left: 80px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+
+
+
+
+    //新微博内容：文本框内容（li的属性innerHTML)+删除超链接(作为li的孩子）
+
+          //创建超链接---设置href onclick 作为li的孩子加入
+
+    
+
+    //提取发布按钮weiboUpload-----
+
+    var uploadBtn=document.getElementById("weiboUpload");
+
+    //提取多行文本框newTxt-----取新微博的内容
+
+    var newTxt=document.getElementById("newTxt");
+
+    
+
+    //创建ul----整个文档加载时只创建一次，作为具体每条微博的父容器
+
+    var contentUl=document.createElement("ul");
+
+    
+
+    //提取微博盒子weiboArea----增加孩子ul
+
+    //将ul作为weiboArea盒子的小孩
+
+    uploadBtn.parentNode.appendChild(contentUl);
+
+    
+
+    //生成一条新微博，增加孩子的行为，onclick事件源
+
+    uploadBtn.onclick=function(){
+
+    
+
+    //创建li---每点击一次btn创建一个li,作为一条新微博
+
+    var newLi=document.createElement("li");
+
+    
+
+    //新微博内容：文本框内容（li的属性innerHTML)
+
+    //判断微博内容是否为空，如果为空，不能发布，单击事件结束
+
+    if(newTxt.value==""){
+
+      window.alert("发布的内容不能为空");
+
+      return false;
+
+    }
+
+    //如果微博内容不为空，置入文本框内容（li的属性innerHTML)
+
+    newLi.innerHTML=newTxt.value;
+
+    
+
+    //新微博内容：删除超链接(作为li的孩子）
+
+    //创建超链接
+
+    var delLink=document.createElement("a");
+
+    //完善超链接
+
+    delLink.href="#";
+
+    delLink.innerHTML="删除";
+
+    delLink.onclick=function(){
+
+      contentUl.removeChild(this.parentNode); //如果点击超链接，就从ul下删除当前超链接的父节点li
+
+    }
+
+    //将超链接加入新增微博li
+
+    newLi.appendChild(delLink);
+
+    
+
+    //将新微博newLi加入ul,新微博在列表前面
+
+    if(contentUl.hasChildNodes())
+
+       contentUl.insertBefore(newLi,contentUl.firstChild);
+
+    else  contentUl.appendChild(newLi); //如果没有微博，直接加入
+
+    
+
+    //清空微博输入区的内容，为下一次发布做准备
+
+    newTxt.value="";
+
+    }
+}
+    </script>
+</head>
+<body>
+
+<div class="box" id="weiboArea">
+    微博发布: <textarea name="" id="newTxt" cols="30" rows="10"></textarea> 
+    <button id="weiboUpload">发布</button>
+</div>
+</body>
+</html>
