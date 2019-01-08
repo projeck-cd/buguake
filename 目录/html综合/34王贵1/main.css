@@ -1,0 +1,235 @@
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, em, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 12px/1.5 "Microsoft yahei", arial, Simsun, sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+.top {
+    height: 36px;
+    border-bottom: 2px blue solid;
+    text-align: left;
+
+}
+
+.top .title {
+    font: 16px/26px "Microsoft YaHei", "SimHei", SimSun, Tahoma, Verdana, Arial, sans-serif;
+}
+
+.top .title span {
+    position: relative;
+    bottom: -7px;
+    float: left;
+    height: 36px;
+    line-height: 30px;
+    color: #333;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.mod .title i {
+    position: absolute;
+    left: 50%;
+    margin-left: -6px;
+    bottom: 3px;
+    display: none;
+    border-bottom: 6px solid #3983e5;
+    border-top: 0 none;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+
+.mod .label-en {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    display: inline-block;
+    background-color: orange;
+    color: #fff;
+    font-weight: normal;
+    padding: 0 2px;
+    font-size: 8px;
+    line-height: 16px;
+
+}
+.mod .triangle {
+    position: absolute;
+    z-index: 1;
+    top: 17px;
+    right: 0;
+    display: inline-block;
+    border-width: 3px;
+    border-style: solid;
+    border-color: orange transparent transparent orange;
+}
+
+
+.title span:hover {
+    color: #3983e5;
+}
+
+ul{
+    list-style: none;
+}
+
+a {
+    color: #3983e5;
+    text-decoration: none;
+}
+
+
+.mod{   
+    width: 945px;
+    margin: 20px auto ; 
+    overflow: hidden;
+}
+
+.mod .top{
+    /* height: 54px;     */
+    
+}
+.mod a {
+    color: #666;
+}
+
+.mod .mod-content{
+    height:312px;
+    border:1px solid #E0E0E0;
+    border-top-width: 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.mod .left{
+    height:312px;
+    float:left;
+    width: 182px;
+    border-right:1px dotted #A3A3A3;
+}
+
+.mod .right{
+       height: 375px;
+    /* float: left; */
+    /* width: 759px; */
+    margin-left: 222px;
+    padding: 12px 0px 0px 15px;
+    /* background-color: #666; */
+    
+
+} 
+
+.mod .right li.active{
+   width: 37px;
+   height: 16px;
+   background-color:#3983e5;
+   border-radius: 2px;
+   text-align: center;
+   line-height: 16px;   
+   /* color: #fff; */
+}
+
+.mod li.active a{
+    font-size: 10px;
+    color:#fff;
+}
+
+.mod .right .more{
+    position: absolute;
+    top:12px;
+    right:17px;
+    padding: 2px 10px;
+}
+.item-thumbnail {
+    width: 100%;
+    height: 110px;
+    overflow: hidden;
+    box-shadow: 1px 1px 1px rgb(0,0,0,0.2);
+}
+.mod .right .more:hover{
+   border: 1px solid #3983e5;
+   border-radius: 5px;
+}
+
+.mod .product{
+    
+    margin-top: 8px;
+    overflow: hidden;
+}
+.mod .product li{
+    float: left;
+    /* width: 174px; */
+    height: 127px;
+    margin:0px 8px 8px 0px;
+    
+
+}
+.product-item {
+    display: block;
+    color: #666;
+}
+.item-thumbnail img {
+    width: 100%;
+    /* height: 90px; */
+    
+    transition: all 1s ease;
+
+    
+}
+ .item-thumbnail img:hover {
+    
+    transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    
+    -webkit-transform: scale(1.1);
+    
+    -moz-transform: scale(1, 1);
+    
+    -o-transform: scale(1, 1);
+    
+} 
+.product-item:hover, .product-item>a:hover {
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .25);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, .25);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .25);
+}
+
+.product-item {
+    float: left;
+    width: 200px;
+    /* height: 127px; */
+    margin: 0px 10px 10px 0px;
+    overflow: hidden;
+}
+.entrance dl {
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.entrance dt {
+    font: 700 14px/24px "Microsoft yahei";
+}
+.entrance dd {
+    margin-left: -10px;
+    overflow: hidden;
+    zoom: 1;
+}
+.mod .left {
+    /* height: 312px; */
+    float: left;
+    width: 187px;
+    padding: 15px 20px;
+    overflow: hidden;
+    /* border-right: 1px dotted #A3A3A3; */
+}
+.entrance .entrance-item {
+    position: relative;
+    float: left;
+    display: block;
+    border-left: 1px solid #ececec;
+    line-height: 1;
+    height: auto;
+    padding: 0 8px;
+    margin: 7px 0 5px;
+}
