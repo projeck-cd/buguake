@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="./js/main.js"></script>
+    <script>
+        // 创建一个购物车
+        var cart = new ShoppingCart();
+        cart.clearCart();
+        // 商品
+        var product = new Product('01', '坦克', '3.jpg', 10);
+        // 订单
+        var order = new Order(product, 3, true);
+      
+
+        cart.addToCart(order);
+        // 又创建一个商品
+        product = new Product('02', '飞机', '4.jpg', 10);
+        //    又创建一个订单
+        order = new Order(product, 5, true);
+        // 将新商品加入购物车（本地存储）
+        cart.addToCart(order);
+        cart .changeQty(01, "2");
+
+        console.log(cart.getDataFromLocalStorage());
+        console.log(cart.getSelectedQty());
+        console.log(cart.getSelectedAmount());
+        // cart.setItemSelectStatus('01', true);
+        // console.log(cart.setItemSelectStatus());
+        // cart.deleteItem('01');
+
+    </script>
+</body>
+
+</html>
