@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         .a{
+            font-size: 40px;
+            color: rgb(7, 1, 1);
+            text-align: center;
+            
+
+        }
+        div{
+            background-color: rgb(250, 250, 245);
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <form action="#" method="get" autocomplete="off">
+    <p  class="a">旅游登记表:<p>
+    姓名：
+    <input type="text" maxlength="6"><br>
+    性别：
+    <input type="radio">男
+    <input type="radio">女<br>
+    真实年龄：<input type="number" name="real_lage" value="20" min="15" max="120" required/>（必须填写）<br>
+    身份证号：<input type="text" name="card" required pattern="^\d{8,18}|[0-9x]{8,18}|[0-9X]{8,18}?$"/><br> 
+    出生日期：<input type="date" name="birthday" value="1990-10-1" required/>（必须填写）<br>
+    电子邮箱：<input type="email" name="myemail" placeholder="123456@126.com" required multiple/>（必须填写）<br>
+    身份证号：<input type="text" name="card" required pattern="^\d{8,18}|[0-9x]{8,18}|[0-9X]{8,18}?$"/>（必须填写）<br>
+    手机号码：<input type="tel" name="telphone" pattern="^\d{11}$" required/>（必须填写）<br>
+    个人主页：<input type="url" name="myurl" list="urllist" placeholder="http://www.baidu.com" pattern="^http://([\w-]+\.)+[\w-]+(/[\w-./?%&=]*)?$"/><br>
+    爱好：
+    <input type="checkbox">游艇
+    <input type="checkbox">潜水
+    <input type="checkbox">钓鱼(可多选)
+    <br>
+
+</div>
+<input type="submit" value="提交"/>
+<input type="reset" value="重置"/>
+</body>
+</html>
